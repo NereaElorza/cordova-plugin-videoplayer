@@ -1,40 +1,54 @@
 {
-  "name": "cordova-plugin-video-player",
-  "version": "1.0.1",
-  "description": "A Codova plugin that simply allows you to immediately play a video in fullscreen mode.",
+  "name": "prueba.eitb.eus",
+  "version": "0.0.1",
+  "displayName": "prueba.eitb.eus",
   "cordova": {
-    "id": "cordova-plugin-video-player",
     "platforms": [
-      "android",
-      "ios"
-    ]
-  },
-  "engines": {
-    "cordovaDependencies": {
-      "2.0.0": {
-        "cordova": ">100"
-      }
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "com.hughisaacs2.cordova.plugins.androidtvplugin": {},
+      "cordova-plugin-media": {},
+      "com.moust.cordova.videoplayer": {}
     }
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "dependencies": {
+    "com.hughisaacs2.cordova.plugins.androidtvplugin": "git+https://github.com/hughisaacs2/Cordova-Android-TV-Plugin.git",
+    "com.moust.cordova.videoplayer": "~1.0.1",
+    "cordova-android": "5.1.1",
+    "cordova-plugin-compat": "^1.1.0",
+    "cordova-plugin-file": "^4.3.3",
+    "cordova-plugin-media": "^2.4.1",
+    "cordova-plugin-video-player": "git+https://github.com/NereaElorza/cordova-plugin-videoplayer.git",
+    "cordova-plugin-whitelist": "1"
+  },
+  "description": "Native Video Player Plugin",
+  "devDependencies": {
+    "cordova-plugin-compat": "undefined1.1.0",
+    "cordova-plugin-media": "undefined2.4.1",
+    "cordova-plugin-file": "undefined4.3.3",
+    "cordova-android": "undefined5.1.1",
+    "com.hughisaacs2.cordova.plugins.androidtvplugin": "undefined1.0.3",
+    "cordova-plugin-video-player": "undefined1.0.1",
+    "cordova-plugin-whitelist": "undefined1.3.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NereaElorza/cordova-plugin-videoplayer.git"
+    "url": "git+https://github.com/moust/cordova-plugin-videoplayer.git"
   },
   "keywords": [
-    "ecosystem:cordova",
-    "cordova-android",
     "cordova",
-    "video",
+    "media",
     "player",
-    "fullscreen"
+    "video",
+    "ecosystem:cordova",
+    "cordova-android"
   ],
-  "author": "Quentin Aupetit",
+  "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NereaElorza/cordova-plugin-videoplayer.git/issues"
+    "url": "https://github.com/moust/cordova-plugin-videoplayer/issues"
   },
   "homepage": "https://github.com/moust/cordova-plugin-videoplayer#readme"
 }
