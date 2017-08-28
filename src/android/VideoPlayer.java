@@ -52,7 +52,7 @@ public class VideoPlayer extends CordovaPlugin implements OnCompletionListener, 
      * @return              A PluginResult object with a status and message.
      */
     public boolean execute(String action, CordovaArgs args, CallbackContext callbackContext) throws JSONException {
-        if (action.equals("close")) {
+        if (action.equals("play")) {
             this.callbackContext = callbackContext;
 
             CordovaResourceApi resourceApi = webView.getResourceApi();
@@ -86,23 +86,7 @@ public class VideoPlayer extends CordovaPlugin implements OnCompletionListener, 
 
             return true;
         }
-        else if (action.equals("pause")) {
-            if ( dialog !=null ) {
-                if ( player.isPlaying()) {
-                    player.pause();
-                }
-                if (callbackContext != null) {
-                    PluginResult result = new PluginResult(PluginResult.Status.OK);
-                    result.setKeepCallback(false); // release status callback in JS side
-                    callbackContext.sendPluginResult(result);
-                    callbackContext = null;
-                }
-
-                return true;
-            }
-            return false;
-        }
-        else if (action.equals("play")) {
+        else if (action.equals("close")) {
             if (dialog != null) {
                 if(player.isPlaying()) {
                     player.stop();
