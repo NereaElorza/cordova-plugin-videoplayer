@@ -12,17 +12,13 @@ module.exports = {
         SCALE_TO_FIT_WITH_CROPPING: 2
     },
 
-    close: function (path, options, successCallback, errorCallback) {
+    play: function (path, options, successCallback, errorCallback) {
         options = this.merge(this.DEFAULT_OPTIONS, options);
-        exec(successCallback, errorCallback, "VideoPlayer", "close", [path, options]);
+        exec(successCallback, errorCallback, "VideoPlayer", "play", [path, options]);
     },
 
-    play: function (successCallback, errorCallback) {
-        exec(successCallback, errorCallback, "VideoPlayer", "play", []);
-    },
-
-    pause: function (successCallback, errorCallback) {
-        exec(successCallback, errorCallback, "VideoPlayer", "pause", []);
+    close: function (successCallback, errorCallback) {
+        exec(successCallback, errorCallback, "VideoPlayer", "close", []);
     },
 
     merge: function () {
